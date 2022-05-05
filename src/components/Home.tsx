@@ -2,14 +2,15 @@ import * as React from "react";
 import DeviceChart from "./DeviceChart";
 import Layout from "./Layout";
 import { name } from "../utils/generators";
+import RadialChart from "./ExtraBar";
 
 export default function Home() {
   return (
     <Layout>
-      <h2>{name("Jordan", "Hudgens")}</h2>
+      <h2>{name("Daniel", "Medina")}</h2>
       <DeviceChart
         options={{
-          colors: ["#0f6375", "#f5a623", "#f5a623"],
+          colors: ["#0f6375", "#f5a623", "#00FF00"],
           labels: ["Desktop", "Mobile", "Tablet"],
         }}
       />
@@ -17,9 +18,12 @@ export default function Home() {
       <DeviceChart
         options={{
           colors: ["#c00", "#3469a7", "#c1b01e"],
-          labels: ["Smartphones", "laptops", "ipads"],
+          labels: ["switch", "ps5", "xbox"],
         }}
       />
-    </Layout>
+
+        <RadialChart />
+      
+          </Layout>
   );
 }
